@@ -44,4 +44,9 @@ public class PersonaController {
         return personaDao.getPersona(id);
     }
 
+    @RequestMapping(value = "api/personas/{id}", method = RequestMethod.PUT)
+    public void editarPersona(@RequestBody Persona persona) {
+        personaDao.editar(persona);
+    }
+
 }

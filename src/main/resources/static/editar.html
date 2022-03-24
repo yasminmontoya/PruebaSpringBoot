@@ -146,15 +146,20 @@
 
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="text" class="form-control form-control-user" id="txtTipoDocumento" placeholder="Tipo Documento">
+                                            <select class="form-control form-control-user form-select" id="txtTipoDocumento"  style="height: 50px !important;padding: 1rem 1rem !important;">
+                                                <option selected="">Tipo Documento</option>
+                                                <option value="CC">Cédula Ciudadanía</option>
+                                                <option value="NIT">Nit</option>
+                                                <option value="CE">Cédula Extranjería</option>
+                                            </select>
                                         </div>
                                         <div class="col-sm-6">
                                             <input type="text" class="form-control form-control-user" id="txtDocumento" placeholder="Documento">
                                         </div>
                                     </div>
-                                    <a onclick="actualizarPersona()" href="#" class="btn btn-primary btn-user btn-block">
-                                        Editar
-                                    </a>
+
+                                    <div id="botonEditar">
+                                    </div>
 
                                 </form>
 
@@ -226,7 +231,7 @@
 <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 <!-- Page level custom scripts -->
-<script src="js/personas.js"></script>
+<script src="js/editar.js"></script>
 
 </body>
 

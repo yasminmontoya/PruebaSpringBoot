@@ -137,19 +137,24 @@
                                 <form class="user">
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="text" class="form-control form-control-user" id="txtNombre" placeholder="Nombre">
+                                            <input type="text" class="form-control form-control-user" id="txtNombre" placeholder="Nombre" readonly>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="text" class="form-control form-control-user" id="txtApellido" placeholder="Apellido">
+                                            <input type="text" class="form-control form-control-user" id="txtApellido" placeholder="Apellido" readonly>
                                         </div>
                                     </div>
 
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="text" class="form-control form-control-user" id="txtTipoDocumento" placeholder="Tipo Documento">
+                                            <select class="form-control form-control-user form-select" id="txtTipoDocumento"  style="height: 50px !important;padding: 1rem 1rem !important;" readonly>
+                                                <option selected="">Tipo Documento</option>
+                                                <option value="CC">Cédula Ciudadanía</option>
+                                                <option value="NIT">Nit</option>
+                                                <option value="CE">Cédula Extranjería</option>
+                                            </select>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="text" class="form-control form-control-user" id="txtDocumento" placeholder="Documento">
+                                            <input type="text" class="form-control form-control-user" id="txtDocumento" placeholder="Documento" readonly>
                                         </div>
                                     </div>
 
@@ -223,7 +228,7 @@
 <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 <!-- Page level custom scripts -->
-<script src="js/personas.js"></script>
+<script src="js/ver.js"></script>
 
 </body>
 

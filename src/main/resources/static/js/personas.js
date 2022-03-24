@@ -21,8 +21,8 @@ async function cargarPersonas() {
   let listadoHtml = '';
   for (let persona of personas) {
     let botonEliminar = '<a href="#" onclick="eliminarPersona(' + persona.id + ')" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a>';
-    let botonEditar = '<a href="editar.html" class="btn btn-warning btn-circle btn-sm"><i class="fas fa-solid fa-pen"></i></a>';
-    let botonVer = '<a href="ver.html" class="btn btn-info btn-circle btn-sm"><i class="fas fa-solid fa-eye"></i></a>';
+    let botonEditar = '<a href="editar.html?id=' + persona.id + '" class="btn btn-warning btn-circle btn-sm"><i class="fas fa-solid fa-pen"></i></a>';
+    let botonVer = '<a href="ver.html?id=' + persona.id + '" class="btn btn-info btn-circle btn-sm"><i class="fas fa-solid fa-eye"></i></a>';
 
     let personaHtml = '<tr><td>'+persona.id+'</td><td>' + persona.documento + '</td><td>'
                     + persona.nombre+'</td><td>'+persona.apellido
@@ -73,23 +73,5 @@ async function crearPersona() {
   });
   alert("La persona fue creada con exito!");
   window.location.href = 'index.html'
-
-}
-
-async function verPersona(id) {
-
- const request = await fetch('api/personas/' + id, {
-    method: 'GET',
-    headers: getHeaders()
-  });
-
-  const persona = await request.json();
-
-  document.querySelector('#txtNombre').value(persona.nombre);
-  document.querySelector('#txtApellido').value(persona.apellido);
-  document.querySelector('#txtTipoDocumento').value(persona.tipoDocumento);
-  document.querySelector('#txtDocumento').value(persona.documento);
-
-  window.location.href = 'ver.html'
 
 }

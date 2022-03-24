@@ -42,4 +42,9 @@ public class PersonaDaoImp implements PersonaDao{
         return  persona;
     }
 
+    @Override
+    public void editar(Persona persona) {
+        entityManager.merge(persona);
+    }
+
 }

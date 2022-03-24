@@ -15,4 +15,6 @@ public interface PersonaDao {
 
     Persona getPersona(Long id);
 
+    void editar(Persona persona);
+
 }

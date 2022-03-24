@@ -23,5 +23,13 @@ public class Usuario {
     @Getter @Setter @Column(name = "password")
     private String password;
 
+    @Getter @Setter @Column(name = "fecha_creacion")
+    private String fechaCreacion;
+
+    @Getter @Setter @Column(name = "fecha_vigencia")
+    private String fechaVigencia;
+
+    @Getter @Setter @Column(name = "activo")
+    private boolean activo;
 
 }
